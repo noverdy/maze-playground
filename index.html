@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Fontawesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css">
+    <!-- Fonts from https://fonts.google.com -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="css/popup.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <title>Maze Playground</title>
+    <link rel="shortcut icon" type="image/jpg" href="images/icon.jpg"/>
+</head>
+<body>
+    <!-- Navbar -->
+    <div class="navbar">
+        <div class="container">
+            <!-- Input Labirin (gambar dinding, hapus dinding, nambahin source, nambahin destination) -->
+            <div class="input-wrapper">
+                <input type="radio" name="mode" id="drawWall" value="drawWall" checked><!--
+                --><label for="drawWall" title="Tambah Dinding (Z)"><span class="fa fa-edit"></label><!--
+                --><input type="radio" name="mode" id="removeWall" value="removeWall"><!--
+                --><label for="removeWall" title="Hapus Dinding (X)"><span class="fa fa-eraser"></span></label><!--
+                --><input type="radio" name="mode" id="addSource" value="addSource"><!--
+                --><label for="addSource" title="Tambah Titik Awal (C)"><span class="fas fa-dot-circle"></span></label><!--
+                --><input type="radio" name="mode" id="addDestination" value="addDestination"><!--
+                --><label for="addDestination" title="Tambah Titik Tujuan (V)"><span class="far fa-dot-circle"></span></label>
+            </div>
+            <!-- Control Button -->
+            <div class="button-wrapper">
+                <button class="btn" id="generateButton">BUAT LABIRIN</button>
+                <button class="btn" id="resetButton">RESET</button>
+                <button class="btn" id="searchButton">CARI JALAN</button>
+                <span class="fa fa-cog settings" id="settingsButton"></span>
+            </div>
+            <!-- Hamburger Menu buat yang ngakses di HP -->
+            <div class="hamburger-wrapper">
+                <span class="fas fa-bars" id="sidebarButton"></span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Sidebar buat yang ngakses di HP -->
+    <div class="sidebar-section">
+        BUAT HP MASIH IN PROGRESS
+    </div>
+
+    <!-- Grid tempat maze nya -->
+    <div class="grid-section">
+        <div class="grid-wrapper" id="gridWrapper">
+            <!-- grid divs -->
+        </div>
+    </div>
+
+    <!-- Pop-up ketika mencet tombol Settings -->
+    <div class="popup-section" id="popup">
+        <div class="popup-panel">
+            <div class="title-wrapper">
+                <h1>SETTINGS</h1>
+                <hr>
+            </div>
+            <div class="menu-wrapper">
+                <div class="menu menu-title">Ukuran Grid</div>
+                <input type="range" min="10" max="60" value="32" class="menu menu-slider" id="gridSlider">
+                <div class="menu menu-title">Kecepatan Cari Jalur</div>
+                <input type="range" min="0" max="84" value="15" class="menu menu-slider" id="speedSlider">
+            </div>
+            <div class="button-wrapper">
+                <button id="saveButton">SIMPAN</button>
+                <button id="resetConfigButton">RESET</button>
+                <button id="closeButton">TUTUP</button>
+            </div>
+            <div class="about-wrapper">
+                <a href="https://instagram.com/rama_noverdy" class="fab fa-instagram" target="_blank" rel="noopener noreferrer"></a>
+                <a href="https://linkedin.com/noverdi" class="fab fa-linkedin" target="_blank" rel="noopener noreferrer"></a>
+                <a href="https://github.com/NoverdiR" class="fab fa-github" target="_blank" rel="noopener noreferrer"></a>
+                <div class="about-title">
+                    Maze Playground - Noverdi Anugrah Ramadhan
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Otak utamanya -->
+    <script src="script.js"></script>
+</body>
+</html>

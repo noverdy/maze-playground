@@ -1,0 +1,121 @@
+.popup-panel {
+    background-color: #fffffff3;
+    border-radius: 10px;
+    box-shadow: 0px 4px 15px -7px rgba(0,0,0,0.7);
+    margin: 60px auto 0 auto;
+    padding: 20px 40px;
+    text-align: center;
+    width: 500px;
+    height: 500px;
+    position: relative;
+}
+
+.popup-panel h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: normal;
+    margin-bottom: 10px;
+}
+
+.popup-panel hr {
+    border: 1px solid #cebebe;
+    margin-bottom: 30px;
+}
+
+.popup-section {
+    backdrop-filter: brightness(90%) blur(2px);
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    visibility: hidden;
+    z-index: 2;
+}
+
+.popup-section .about-wrapper {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.popup-section .about-wrapper .about-title {
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+.popup-section .about-wrapper .fab {
+    color: black;
+    font-size: 30px;
+    margin: 15px 10px;
+    text-decoration: none;
+}
+
+.popup-section .about-wrapper .fab:hover {
+    color: #0075ff;
+}
+
+.popup-section .button-wrapper {
+    float: none;
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+
+.popup-section .button-wrapper button {
+    background-color: transparent;
+    border: 1px solid black;
+    border-radius: 3px;
+    margin: 0 20px;
+    padding: 5px 20px;
+}
+
+.popup-section .button-wrapper button:hover {
+    background-color: black;
+    color: white;
+}
+
+.popup-section .button-wrapper #saveButton {
+    background-color: #0075ff;
+    border: 1px solid #0075ff;
+    color: white;
+}
+
+.popup-section .button-wrapper #saveButton:hover {
+    background-color: white;
+    color: #0075ff;
+}
+
+.popup-section.show {
+    visibility: visible;
+    -webkit-animation: fadeIn 0.3s;
+    animation: fadeIn 0.3s;
+}
+
+.popup-section .menu {
+    margin-bottom: 20px;
+}
+
+.popup-section .menu-title {
+    width: 40%;
+}
+
+.popup-section .menu-slider {
+    width: 60%;
+}
+
+.popup-section .menu-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 30px;
+    text-align: left;
+}
+
+@-webkit-keyframes fadeIn {
+    from {opacity: 0; transform: translateY(15px);}
+    to {opacity: 1; transform: translateY(0);}
+}
+  
+@keyframes fadeIn {
+    from {opacity: 0; transform: translateY(15px);}
+    to {opacity: 1; transform: translateY(0);}
+}
